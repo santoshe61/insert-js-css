@@ -24,6 +24,7 @@
 		<div class="blink-indicator save" data-msg="saved"></div>
 		<nav class="tabs tabs_menu">
 			<a class="tabs__tab tabs__tab_active" data-tab="websites" data-msg="websites"></a>
+			<a class="tabs__tab" data-tab="paths" data-msg="paths"></a>
 			<a class="tabs__tab" data-tab="libraries" data-msg="libs"></a>
 			<a class="tabs__tab" data-tab="doc" data-msg="docBtn"></a>
 			<a class="tabs__tab" data-tab="settings" data-msg="settings"></a>
@@ -38,6 +39,31 @@
 					</a>
 				</div>
 				<div id="siteList"></div>
+			</div>
+
+			<div class="tabs__content" data-tab="paths">
+				<div class="box__content">
+					<p data-msg="pathDescription"></p>
+				</div>
+				<div id="pathList"></div>
+				<div class="box__content">
+					<form id="pathFormAdd" method="post">
+						<div class="columns">
+							<div class="columns__column columns__column_x2">
+								<input class="input" id="libname" type="text" data-msg-attr="placeholder" data-msg="name">
+							</div>
+							<div class="columns__column columns__column_x2">
+								<input class="input" id="pathrc" type="text" placeholder="http://example.com/lib.js">
+							</div>
+							<div class="columns__column">
+								<a id="pathubmit" class="button button_primary">
+									<span class="button__icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+									<span data-msg="addNew"></span>
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 
 			<div class="tabs__content" data-tab="libraries">

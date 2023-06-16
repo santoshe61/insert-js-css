@@ -138,6 +138,7 @@ function Protos(e) {
       name: "",
       js: "",
       css: "",
+      scss: "",
       compiledCss: "",
       libs: [],
       options: { on: !0, altJS: !1, altCSS: !1, autoImportant: !1 },
@@ -477,6 +478,31 @@ function applyHtmlTemplates() {
         });
       });
   });
+}
+function scssTocssFetch(content, type="scss"){
+  var api, param;
+  if(type == "scss"){
+    api = "https://tools.atatus.com/tools/scss-to-css";
+    param = "sassData";
+  }else if (type == "less"){
+    api =  "https://tools.atatus.com/tools/less-to-css";
+    param = "lessData";
+  }
+  if (!content) {
+    var editor = ace.edit("scss");
+    content = editor.getValue();
+  }
+  if(!content) return Promise.resolve(false);
+  console.log(content);
+  let headers = {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"};
+  return fetch(api, 
+  {
+    body: param+"="+encodeURIComponent(content.trim()), 
+    method: "POST", 
+    headers
+  })
+  .then(res => res.text())
+  // .then(console.log);
 }
 Array.prototype.findIndex ||
   (Array.prototype.findIndex = function (e) {

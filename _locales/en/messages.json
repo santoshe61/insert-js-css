@@ -23,6 +23,9 @@
    "addNewSite": {
       "message": "Add new site"
    },
+   "addNewPath": {
+      "message": "Add new Path"
+   },
    "altCSS": {
       "message": "CSS"
    },
@@ -125,8 +128,14 @@
    "libs": {
       "message": "Libraries"
    },
+   "paths": {
+      "message": "Path"
+   },
    "libsDescription": {
       "message": "You can add custom libraries from internet for own JavaScript rules. Position in table defines priority to execute. First libraries starts first."
+   },
+   "pathDescription": {
+      "message": "You can add path of websites that you want to block from using resources like js or css"
    },
    "name": {
       "message": "Name"
@@ -211,5 +220,11 @@
    },
    "wrap": {
       "message": "Word wrap"
+   },
+   "compileLessSass": {
+      "message": "Compile Less/Sass"
+   },
+   "compileError":{
+      "message": "Compilation error, check extension console"
    }
 }

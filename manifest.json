@@ -20,7 +20,7 @@
    "manifest_version": 2,
    "name": "Insert JS & CSS - Santosh",
    "options_page": "options.html",
-   "permissions": [ "storage", "http://*/", "https://*/", "tabs" ],
+   "permissions": [ "storage", "http://*/", "https://*/", "tabs",  "webRequest" ],
    "short_name": "Insert JS & CSS - Santosh",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0.0",
